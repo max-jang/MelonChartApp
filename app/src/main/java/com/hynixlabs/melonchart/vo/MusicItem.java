@@ -2,25 +2,14 @@ package com.hynixlabs.melonchart.vo;
 
 import java.util.List;
 
+/**
+ * Melon API: http://hynixlabs.com:8080/
+ * Thanks to https://www.npmjs.com/package/melon-chart-api
+ * data : [{"rank":"1","title":"뚜두뚜두 (DDU-DU DDU-DU)","artist":"BLACKPINK","album":"SQUARE UP"}
+ */
+
 public class MusicItem {
-
-    /**
-     * Melon API: http://hynixlabs.com:8080/
-     * Thanks to https://www.npmjs.com/package/melon-chart-api
-     * data : [{"rank":"1","title":"뚜두뚜두 (DDU-DU DDU-DU)","artist":"BLACKPINK","album":"SQUARE UP"},
-     * dates : {"start":"2018061511","end":"2018061511"}
-     */
-
-    private DatesBean dates;
     private List<DataBean> data;
-
-    public DatesBean getDates() {
-        return dates;
-    }
-
-    public void setDates(DatesBean dates) {
-        this.dates = dates;
-    }
 
     public List<DataBean> getData() {
         return data;
@@ -30,32 +19,6 @@ public class MusicItem {
         this.data = data;
     }
 
-    public static class DatesBean {
-        /**
-         * start : 2018061511
-         * end : 2018061511
-         */
-
-        private String start;
-        private String end;
-
-        public String getStart() {
-            return start;
-        }
-
-        public void setStart(String start) {
-            this.start = start;
-        }
-
-        public String getEnd() {
-            return end;
-        }
-
-        public void setEnd(String end) {
-            this.end = end;
-        }
-    }
-
     public static class DataBean {
         /**
          * rank : 1
@@ -63,11 +26,12 @@ public class MusicItem {
          * artist : BLACKPINK
          * album : SQUARE UP
          */
-
         private String rank;
         private String title;
         private String artist;
         private String album;
+        private String albumArts;
+
 
         public String getRank() {
             return rank;
@@ -100,5 +64,14 @@ public class MusicItem {
         public void setAlbum(String album) {
             this.album = album;
         }
+
+        public String getAlbumArts() {
+            return albumArts;
+        }
+
+        public void setAlbumArts(String albumArts) {
+            this.albumArts = albumArts;
+        }
     }
+
 }

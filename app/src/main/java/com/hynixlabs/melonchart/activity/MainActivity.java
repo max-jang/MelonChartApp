@@ -2,7 +2,6 @@ package com.hynixlabs.melonchart.activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
-        // 네이게이션메뉴를 슬라이드오픈하면 콘텐츠가 밀림
+        // 네이게이션메뉴 오픈하면
         drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
             public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
@@ -72,12 +71,14 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /*Tab Layout*/
+
+        //Tab Layout
         tabLayout = findViewById(R.id.tabLayout);
         ViewPager viewPager = findViewById(R.id.viewPager);
 
         // Creating TabPagerAdapter adapter
         setupViewPager(viewPager);
+
     }
 
     //ViewPager 설정 with Adapter
@@ -89,8 +90,8 @@ public class MainActivity extends AppCompatActivity
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(adapter);
-
     }
+
 
     //아래는 전부 NavigationBar설정
     @Override
