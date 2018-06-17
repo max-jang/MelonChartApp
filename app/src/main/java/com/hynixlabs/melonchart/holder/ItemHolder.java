@@ -15,6 +15,7 @@ public class ItemHolder extends RecyclerView.ViewHolder {
     public TextView txt_album;
     public TextView txt_rank;
     public ImageView img_album;
+    public TextView txt_rankUpDown;
 
 
     public ItemHolder(View root) {
@@ -25,5 +26,6 @@ public class ItemHolder extends RecyclerView.ViewHolder {
         txt_album = root.findViewById(R.id.txt_album);
         txt_rank = root.findViewById(R.id.txt_rank);
         img_album = root.findViewById(R.id.img_album);
+        txt_rankUpDown = root.findViewById(R.id.txt_rankUpDown);
     }
 }

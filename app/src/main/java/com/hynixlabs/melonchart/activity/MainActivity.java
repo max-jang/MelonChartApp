@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onQueryTextSubmit(String query) {
                 searchText = query;
-                Toast.makeText(getApplicationContext(), searchText, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "검색기능은 추후 지원예정입니다.", Toast.LENGTH_LONG).show();
                 searchView.clearFocus();
                 return true;
             }

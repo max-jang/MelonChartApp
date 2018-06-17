@@ -31,7 +31,8 @@ public class MusicItem {
         private String artist;
         private String album;
         private String albumArts;
-
+        private String rank_wrap;
+        private String albumNum;
 
         public String getRank() {
             return rank;
@@ -71,6 +72,22 @@ public class MusicItem {
 
         public void setAlbumArts(String albumArts) {
             this.albumArts = albumArts;
+        }
+
+        public String getRank_wrap() {
+            return rank_wrap;
+        }
+
+        public void setRank_wrap(String rank_wrap) {
+            this.rank_wrap = rank_wrap;
+        }
+
+        public String getAlbumNum() {
+            return albumNum;
+        }
+
+        public void setAlbumNum(String albumNum) {
+            albumNum = albumNum;
         }
     }
 
