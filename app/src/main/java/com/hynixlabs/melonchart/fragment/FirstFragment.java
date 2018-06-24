@@ -45,14 +45,15 @@ public class FirstFragment extends Fragment implements SwipeRefreshLayout.OnRefr
         recyclerView.setHasFixedSize(true);
         //가로, 세로 레이아웃매니저 설정
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        getMusicList();
-
         layout = view.findViewById(R.id.swipe_layout);
         layout.setOnRefreshListener(this);
+        getMusicList();
         return view;
     }
 
+    //음악정보를 Retrofit으로 가져오는 함수
     private void getMusicList() {
+        layout.setRefreshing(true);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://202.182.103.65:8080")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -78,20 +79,18 @@ public class FirstFragment extends Fragment implements SwipeRefreshLayout.OnRefr
                     }
                 }
             }
-
             @Override
             public void onFailure(Call<MusicItem> call, Throwable t) {
                 Log.d("Error", t.getMessage());
                 layout.setRefreshing(false);
             }
         });
-
-        System.out.println("getMusicList()");
-
+        System.out.println("getMusicList() is executed");
     }
 
     @Override
     public void onRefresh() {
+        //당겨서 새로고침을 시도할 때 새 음악리스트를 불러옴
         getMusicList();
     }
 

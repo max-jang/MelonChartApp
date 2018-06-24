@@ -25,6 +25,7 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
         return mFragmentList.size();
     }
 
+    //Flagment 추가 메소드
     public void addFragment(Fragment fragment, String title) {
         mFragmentList.add(fragment);
         mFragmentTitleList.add(title);

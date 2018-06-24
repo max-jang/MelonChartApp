@@ -8,23 +8,31 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Melon 차트"
+        android:text="장국영"
         android:textSize="30dp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="이 앱은 음원사이트 멜론의 실시간 차트 100개를 보여주는 앱으로써, 곡 클릭 시 앨범정보를 보여주는 기능이 있습니다"
+        android:layout_marginTop="10dp"
+        android:text="양영디지털고등학교 3학년 재학중"
         android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="라이브러리: Glide, Retrofits"
+        android:layout_marginTop="10dp"
+        android:text="분당 판교신도시 거주"
         android:textSize="20dp" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="더 많은 정보는 facebook.com/hynixJKY 를 참고해주세요."
+        android:textSize="20dp"/>
+
 
 
 </LinearLayout>

@@ -86,6 +86,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<ItemHolder> {
                     .into(img_album);
         }
 
+        // 카드뷰 클릭 시 앨범정보 웹뷰로 보여줌(Dialog)
         cardView.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetJavaScriptEnabled")
             @Override
@@ -95,10 +96,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<ItemHolder> {
                 WebView wb = dialog.findViewById(R.id.webView);
                 wb.getSettings().setJavaScriptEnabled(true);
                 wb.setWebViewClient(new MyWebViewClient());
-                wb.loadUrl("http://m.app.melon.com/album/music.htm?albumId=" + vo.getData().get(position).getAlbumNum());
-                System.out.println("http://m.app.melon.com/album/music.htm?albumId=" + vo.getData().get(position).getAlbumNum());
+                wb.loadUrl("http://m.app.melon.com/album/music.htm?albumId="
+                        + vo.getData().get(position).getAlbumNum());
+                System.out.println("http://m.app.melon.com/album/music.htm?albumId="
+                        + vo.getData().get(position).getAlbumNum());
                 dialog.setCancelable(true);
                 dialog.setTitle("WebView");
+                //WebView 크기설정
                 WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
                 lp.copyFrom(dialog.getWindow().getAttributes());
                 lp.width = WindowManager.LayoutParams.MATCH_PARENT;
@@ -106,7 +110,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<ItemHolder> {
                 dialog.show();
                 Window window = dialog.getWindow();
                 window.setAttributes(lp);
-
             }
         });
     }
