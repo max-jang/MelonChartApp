@@ -55,7 +55,7 @@ public class FirstFragment extends Fragment implements SwipeRefreshLayout.OnRefr
     private void getMusicList() {
         layout.setRefreshing(true);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://202.182.103.65:8080")
+                .baseUrl("http://hynixlabs.com:8080")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
